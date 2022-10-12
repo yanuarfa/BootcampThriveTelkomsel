@@ -38,4 +38,4 @@ function bintang(angka) {
   }
 }
 
-bintang(3);
+bintang(10);
