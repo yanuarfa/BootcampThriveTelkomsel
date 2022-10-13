@@ -95,7 +95,7 @@ const data = [
     nilai: 70,
   },
   {
-    nama: "Andi",
+    nama: "Yuni",
     nilai: 60,
   },
 ];
