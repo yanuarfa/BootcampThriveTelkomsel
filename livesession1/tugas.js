@@ -1,20 +1,36 @@
-// Menampilkan Bilangan Prima
-function cekPrima(hasilooping) {
-  for (let i = 1; i <= Math.sqrt(hasilooping); i++) {
-    if (i == 1) {
-      continue;
-    } else if (hasilooping % i == 0) {
-      return false;
-    }
-  }
-  return true;
-}
+// Cara Lama
+// function cekPrima(hasilooping) {
+//   for (let i = 1; i <= Math.sqrt(hasilooping); i++) {
+//     if (i == 1) {
+//       continue;
+//     } else if (hasilooping % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-function loopingPrima(inputAngka) {
-  for (let i = 1; i <= inputAngka; i++) {
-    if (i == 1) {
-      continue;
-    } else if (cekPrima(i)) {
+// function loopingPrima(inputAngka) {
+//   for (let i = 1; i <= inputAngka; i++) {
+//     if (i == 1) {
+//       continue;
+//     } else if (cekPrima(i)) {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// Menampilkan Bilangan Prima
+function loopingPrima(angka) {
+  for (let i = 2; i <= angka; i++) {
+    let prima = true;
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        prima = false;
+        break;
+      }
+    }
+    if (i > 1 && prima == true) {
       console.log(i);
     }
   }
